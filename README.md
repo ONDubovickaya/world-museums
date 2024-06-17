@@ -1,2 +1,2 @@
-# world-museums
-Project for Computer Networks course (MPSU)
+# Музеи мира
+Проект для курса "Компьютерные сети" со времён моего обучения в бакалавриате МПГУ

@@ -1,0 +1,55 @@
+<html>
+<head>
+<title> Меню </title>
+
+<script type="text/javascript"> 
+function animateText(id, text, i) { 
+document.getElementById(id).innerHTML = text.substring(0, i); 
+i++; 
+if (i > text.length) i = 0; 
+setTimeout("animateText('" + id + "','" + text + "'," + i + ")", 100); 
+}
+</script>
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="style3.css">
+
+<style>
+body{
+background: #ffe4e1;
+}
+</style>
+
+</head>
+<body>
+<br>
+<ul id="navbar">
+
+	<li> 
+<a href="Страны.htm" target="fr2"> Страны </a>
+	</li>
+
+	<li>
+<a href="Города.htm" target="fr2"> Города </a>
+	</li>
+
+	<li> 
+<a href="Скульптура.htm" target="fr2"> Скульптура </a>
+	</li>
+
+	<li> 
+<a href="Живопись.htm" target="fr2"> Живопись </a>
+	</li>
+
+<br>
+	<li> 
+<a href="Видео.htm" target="fr2"> Видео </a>
+	</li>
+
+</ul>
+<br>
+
+<body onload = 'animateText("dynamic-text", "Приветствуем Вас на нашем сайте!", 0,);'> 
+<center> <font face=arial size=3 color=#800000> <I> <span id = 'dynamic-text'></span> </I> </font> </center>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+<head>
+<title> Страны </title>
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="style3.css">
+
+<script language = "javascript"> 
+	arrColor = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]; 
+	function mouseOut() { 
+	for (i = 0; i < 13; i++) 
+	setTimeout ('document.blinkbutton.button.style.background = "#'+arrColor[15-i]+'0'+arrColor[15-i]+'FFF";', i * 50); 
+	} 
+	
+	function mouseOver() { 
+	for (i = 0; i < 15; i++) 
+	setTimeout ('document.blinkbutton.button.style.background = "#'+arrColor[i]+'0'+arrColor[i]+'F31";', i * 50); 
+	} 
+</script>
+
+<script type="text/javascript"> 
+	var url = "http://mysyte.ru"; 
+	var title = "Музеи мира"; 
+
+	function addFavorite(a) { 
+	try { 
+	window.external.AddFavorite(url, title); 
+	} 
+	
+	catch (e) { 
+	try { 
+	window.sidebar.addPanel (title, url, ""); 
+	} 
+	
+	catch (e) { 
+	if (typeof(opera)=="object") { 
+	a.rel = "sidebar"; 
+	a.title = title; 
+	a.url = url; 
+	return true; 
+	} else { 
+	alert("Нажмите Ctrl-D для добавления в избранное"); 
+	} 
+	} 
+	} 
+	return false; 
+	} 
+</script>
+
+</head>
+<body>
+
+<h1 align="center"> <U> <font face=arial size=4 color=#800000> Страны </font> </U> </h1>
+
+<ul id="navbar">
+
+	<li> 
+<a href="frame2.htm" target="fr2"> Главное меню </a>
+	</li>
+
+<br>
+
+      	<li>
+<a href="Австрия.htm" target=mainwin> Австрия </A>
+	</li>
+
+	<li>
+<a href="Ватикан.htm" target=mainwin> Ватикан </A>
+	</li>
+
+	<li>
+<a href="Великобритания.htm" target=mainwin> Великобритания </A>
+	</li>
+	
+	<li>
+<a href="Германия.htm" target=mainwin> Германия </A>
+	</li>
+
+	<li>
+<a href="Египет.htm" target=mainwin> Египет </A>
+	</li>
+
+	<li>
+<a href="Китай.htm" target=mainwin> Китай </A>
+	</li>
+
+	<li>
+<a href="Норвегия.htm" target=mainwin> Норвегия </A>
+	</li>
+
+	<li>
+<a href="Россия.htm" target=mainwin> Россия </A>
+	</li>
+
+	<li>
+<a href="Франция.htm" target="mainwin"> Франция </a>
+	</li>
+
+	<li>
+<a href="Чехия.htm" target="mainwin"> Чехия </a>
+	</li>
+</ul>
+<br>
+
+<form name = "blinkbutton"> 
+<input type="button" name="button" value="Назад" onclick="history.back();" onMouseOver='mouseOver()' onMouseOut='mouseOut()' style="background-color: #1400FF" >
+<br>
+
+<br>
+<a href="#" onclick="return addFavorite(this);"> Добавить в избранное </a>
+
+</body>
+</html>
